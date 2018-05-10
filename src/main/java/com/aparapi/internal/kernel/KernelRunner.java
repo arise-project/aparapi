@@ -1309,7 +1309,7 @@ public class KernelRunner extends KernelRunnerJNI{
 
          //This method is synchronized thus ensuring thread safety on concurrent executions of the same kernel class,
          //since preferences is shared between such threads.
-         preferences.markDeviceFailed(device);
+         preferences.markPreferredDeviceFailed();
 
 //         Device nextDevice = preferences.getPreferredDevice(kernel);
 //
@@ -1750,7 +1750,7 @@ public class KernelRunner extends KernelRunnerJNI{
                return false;
          }
       } else {
-         return KernelManager.instance().getPreferences(kernel).isDeviceAmongPreferredDevices(device);
+         return (device == kernel.getTargetDevice());
       }
    }
 

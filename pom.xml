@@ -167,7 +167,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>mygmail.Manager</mainClass>
+                            <mainClass>com.aparapi.internal.tool.InstructionViewer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
